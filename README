@@ -1,0 +1,17 @@
+
+1. Environment
+
+   download newest python from https://www.python.org/getit
+
+   tar xvf Python-3.9.1.tar.xz
+   cd Python-3.9.1
+   ./configure --enable-optimizations
+   sudo make
+   sudo make install
+
+   sudo pip3.9 install pandas
+   sudo pip3.9 install tushare
+
+2. tushare introduction
+
+   this is thirdparty python libs that can query stock information
