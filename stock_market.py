@@ -29,16 +29,10 @@ class stock_if :
     def get_stock_list ( self ) :
         data = self.tsif.get_basic_info()
         for index, row in data.iterrows() :
-            print ( row['ts_code'] )
+            self.stock_list.append( row['ts_code'] )
 
 if __name__ == "__main__":
 
-    tsif = stock_if()
-    # tsif.get_basic_info( ingenic_stock_code )
-    # tsif.get_basic_info( ingenic_stock_code )
-    # tsif.get_company_info( ingenic_stock_code )
-    # tsif.get_stock_daily( ingenic_stock_code )
-    # tsif.get_stock_weekly( ingenic_stock_code )
-    # tsif.get_stock_monthly( ingenic_stock_code )
-    # tsif.get_new_share()
-    tsif.get_stock_list()
+    stif = stock_if()
+    stif.get_stock_list()
+    print ( stif.tsif.get_stock_moneyflow( ingenic_stock_code ) )
